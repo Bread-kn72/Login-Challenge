@@ -34,6 +34,11 @@ final class SecondViewController: UIViewController {
         super.viewDidLoad()
         
         configureAddTarget()
+        
+        if let email {
+            secondView.mainTextLabel.text = "\(String(describing: email)) 님 환영합니다."
+        }
+        
     }
     
     // MARK: - methods
