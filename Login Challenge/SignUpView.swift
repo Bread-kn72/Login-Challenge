@@ -55,6 +55,9 @@ final class SignUpView: UIView {
     // MARK: - life cycle
     override init(frame: CGRect) {
         super.init(frame: frame)
+        configureUI()
+        configureHierarchy()
+        configureConstraints()
     }
     
     required init?(coder: NSCoder) {
