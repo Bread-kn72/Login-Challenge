@@ -12,6 +12,7 @@
 		4D950A4B2CB6906F000CF7D4 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4D950A4A2CB6906F000CF7D4 /* IQKeyboardManagerSwift */; };
 		4D950A4E2CB6A380000CF7D4 /* MI+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D950A4C2CB6A380000CF7D4 /* MI+CoreDataClass.swift */; };
 		4D950A4F2CB6A380000CF7D4 /* MI+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D950A4D2CB6A380000CF7D4 /* MI+CoreDataProperties.swift */; };
+		4D950A562CB6BBD2000CF7D4 /* CoreData Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D950A552CB6BBD2000CF7D4 /* CoreData Methods.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		4D950A272CB68928000CF7D4 /* Login ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Login ChallengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D950A4C2CB6A380000CF7D4 /* MI+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MI+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4D950A4D2CB6A380000CF7D4 /* MI+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MI+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4D950A552CB6BBD2000CF7D4 /* CoreData Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreData Methods.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -91,6 +93,7 @@
 		4D9509FB2CB68927000CF7D4 = {
 			isa = PBXGroup;
 			children = (
+				4D950A552CB6BBD2000CF7D4 /* CoreData Methods.swift */,
 				4D950A4C2CB6A380000CF7D4 /* MI+CoreDataClass.swift */,
 				4D950A4D2CB6A380000CF7D4 /* MI+CoreDataProperties.swift */,
 				4D950A062CB68927000CF7D4 /* Login Challenge */,
@@ -254,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D950A562CB6BBD2000CF7D4 /* CoreData Methods.swift in Sources */,
 				4D950A4E2CB6A380000CF7D4 /* MI+CoreDataClass.swift in Sources */,
 				4D950A4F2CB6A380000CF7D4 /* MI+CoreDataProperties.swift in Sources */,
 			);
