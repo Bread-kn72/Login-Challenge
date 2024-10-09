@@ -70,6 +70,7 @@ final class SignUpViewController: UIViewController {
     }
 }
 
+// MARK: - extensions
 extension SignUpViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == signUpView.emailTextField {

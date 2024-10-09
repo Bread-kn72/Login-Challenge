@@ -70,6 +70,7 @@ final class MainViewController: UIViewController {
     }
 }
 
+// MARK: - extensions
 extension MainViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == mainView.emailTextField {
