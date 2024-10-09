@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4D950A452CB69060000CF7D4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4D950A442CB69060000CF7D4 /* SnapKit */; };
+		4D950A482CB69069000CF7D4 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 4D950A472CB69069000CF7D4 /* Then */; };
+		4D950A4B2CB6906F000CF7D4 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4D950A4A2CB6906F000CF7D4 /* IQKeyboardManagerSwift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		4D950A1E2CB68928000CF7D4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -55,6 +61,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D950A452CB69060000CF7D4 /* SnapKit in Frameworks */,
+				4D950A482CB69069000CF7D4 /* Then in Frameworks */,
+				4D950A4B2CB6906F000CF7D4 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +122,9 @@
 			);
 			name = "Login Challenge";
 			packageProductDependencies = (
+				4D950A442CB69060000CF7D4 /* SnapKit */,
+				4D950A472CB69069000CF7D4 /* Then */,
+				4D950A4A2CB6906F000CF7D4 /* IQKeyboardManagerSwift */,
 			);
 			productName = "Login Challenge";
 			productReference = 4D950A042CB68927000CF7D4 /* Login Challenge.app */;
@@ -190,6 +202,11 @@
 			);
 			mainGroup = 4D9509FB2CB68927000CF7D4;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				4D950A432CB69060000CF7D4 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				4D950A462CB69069000CF7D4 /* XCRemoteSwiftPackageReference "Then" */,
+				4D950A492CB6906F000CF7D4 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 4D950A052CB68927000CF7D4 /* Products */;
 			projectDirPath = "";
@@ -545,6 +562,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4D950A432CB69060000CF7D4 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		4D950A462CB69069000CF7D4 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		4D950A492CB6906F000CF7D4 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4D950A442CB69060000CF7D4 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D950A432CB69060000CF7D4 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		4D950A472CB69069000CF7D4 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D950A462CB69069000CF7D4 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		4D950A4A2CB6906F000CF7D4 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D950A492CB6906F000CF7D4 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4D9509FC2CB68927000CF7D4 /* Project object */;
 }
