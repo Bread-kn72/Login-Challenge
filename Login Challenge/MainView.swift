@@ -12,14 +12,14 @@ import Then
 final class MainView: UIView {
     
     // MARK: - properties
-    let mainTextLabel = UILabel().then {
+    private let mainTextLabel = UILabel().then {
         $0.text = "Welcome to Login Challenge"
         $0.textColor = .black
         $0.font = .systemFont(ofSize: 24, weight: .bold)
         $0.textAlignment = .center
     }
     
-    let emailTextLabel = UILabel().then {
+    private let emailTextLabel = UILabel().then {
         $0.text = "Email"
         $0.textColor = .black
         $0.font = .systemFont(ofSize: 16, weight: .semibold)
@@ -35,7 +35,7 @@ final class MainView: UIView {
         $0.returnKeyType = .next
     }
     
-    let passwordTextLabel = UILabel().then {
+    private let passwordTextLabel = UILabel().then {
         $0.text = "Password"
         $0.textColor = .black
         $0.font = .systemFont(ofSize: 16, weight: .semibold)
@@ -60,6 +60,14 @@ final class MainView: UIView {
         $0.layer.masksToBounds = true
     }
     
+    let signupButton = UIButton().then {
+        $0.setTitle("SignUp", for: .normal)
+        $0.setTitleColor(.white, for: .normal)
+        $0.backgroundColor = .green
+        $0.layer.cornerRadius = 10
+        $0.layer.masksToBounds = true
+    }
+    
     // MARK: - life cycle
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -79,7 +87,7 @@ final class MainView: UIView {
     }
     
     func configureHierarchy() {
-        [mainTextLabel, emailTextLabel, emailTextField, passwordTextLabel, passwordTextField, loginbutton].forEach {
+        [mainTextLabel, signupButton, emailTextLabel, emailTextField, passwordTextLabel, passwordTextField, loginbutton].forEach {
             self.addSubview($0)
         }
     }
@@ -90,6 +98,8 @@ final class MainView: UIView {
             $0.height.equalTo(50)
             $0.centerX.equalToSuperview()
         }
+        
+        
         
         emailTextLabel.snp.makeConstraints {
             $0.top.equalTo(mainTextLabel.snp.bottom).offset(120)
@@ -121,6 +131,13 @@ final class MainView: UIView {
             $0.bottom.equalTo(passwordTextField.snp.bottom).offset(100)
             $0.height.equalTo(40)
             $0.horizontalEdges.equalToSuperview().inset(50)
+            $0.centerX.equalTo(mainTextLabel)
+        }
+        
+        signupButton.snp.makeConstraints {
+            $0.horizontalEdges.equalTo(loginbutton)
+            $0.top.equalTo(loginbutton.snp.bottom).offset(20)
+            $0.height.equalTo(loginbutton)
             $0.centerX.equalTo(mainTextLabel)
         }
     }
