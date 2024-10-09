@@ -14,7 +14,10 @@ final class CoreDataMethods {
     static let shared = CoreDataMethods()
     
     var container: NSPersistentContainer {
-        NSPersistentContainer(name: "LoginChallenge")
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            fatalError("AppDelegate를 가져올 수 없습니다.")
+        }
+        return appDelegate.persistentContainer
     }
     
     // MARK: - methods
