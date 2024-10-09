@@ -99,8 +99,6 @@ final class MainView: UIView {
             $0.centerX.equalToSuperview()
         }
         
-        
-        
         emailTextLabel.snp.makeConstraints {
             $0.top.equalTo(mainTextLabel.snp.bottom).offset(120)
             $0.height.equalTo(25)
