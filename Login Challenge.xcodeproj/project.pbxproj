@@ -48,16 +48,6 @@
 			path = "Login Challenge";
 			sourceTree = "<group>";
 		};
-		4D950A202CB68928000CF7D4 /* Login ChallengeTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Login ChallengeTests";
-			sourceTree = "<group>";
-		};
-		4D950A2A2CB68928000CF7D4 /* Login ChallengeUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Login ChallengeUITests";
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				4D950A062CB68927000CF7D4 /* Login Challenge */,
-				4D950A202CB68928000CF7D4 /* Login ChallengeTests */,
-				4D950A2A2CB68928000CF7D4 /* Login ChallengeUITests */,
 				4D950A052CB68927000CF7D4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -143,9 +131,6 @@
 			dependencies = (
 				4D950A1F2CB68928000CF7D4 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				4D950A202CB68928000CF7D4 /* Login ChallengeTests */,
-			);
 			name = "Login ChallengeTests";
 			packageProductDependencies = (
 			);
@@ -165,9 +150,6 @@
 			);
 			dependencies = (
 				4D950A292CB68928000CF7D4 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				4D950A2A2CB68928000CF7D4 /* Login ChallengeUITests */,
 			);
 			name = "Login ChallengeUITests";
 			packageProductDependencies = (
