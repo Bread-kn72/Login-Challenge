@@ -6,14 +6,32 @@
 //
 
 import UIKit
+import CoreData
 
-class MainViewController: UIViewController {
-
+final class MainViewController: UIViewController {
+    
+    // MARK: - properties
+    private let mainView = MainView()
+    
+    // MARK: - life cycle
+    override func loadView() {
+        view = mainView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        configureAddTarget()
     }
-
-
+    
+    // MARK: - methods
+    func configureAddTarget() {
+        mainView.loginbutton.addTarget(self, action: #selector(checkMember), for: .touchUpInside)
+    }
+    
+    @objc func checkMember() {
+    }
+    
+    func tappedLoginButton() {
+    }
 }
 
