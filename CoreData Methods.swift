@@ -51,9 +51,9 @@ final class CoreDataMethods {
         }
     }
     
-    func deleteData(name: String) {
+    func deleteData(email: String, password: String) {
         let fetchRequest = MI.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "name == %@", name)
+        fetchRequest.predicate = NSPredicate(format: "email == %@ AND password == %@", email, password)
         
         do {
             let result = try self.container.viewContext.fetch(fetchRequest)
