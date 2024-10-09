@@ -44,7 +44,7 @@ final class MainViewController: UIViewController {
             
             if !result.isEmpty {
                 print("로그인 성공")
-                present(SecondViewController(), animated: true)
+                present(SecondViewController(email: email, password: password), animated: true)
             } else {
                 print("이메일 또는 비밀번호가 잘못되었습니다.")
                 let alert = UIAlertController(title: "로그인 실패", message: "이메일 또는 비밀번호가 잘못되었습니다.", preferredStyle: .alert)
