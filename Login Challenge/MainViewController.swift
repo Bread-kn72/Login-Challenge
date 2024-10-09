@@ -21,15 +21,21 @@ final class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureAddTarget()
+        configureDelegate()
     }
     
     // MARK: - methods
-    func configureAddTarget() {
+    private func configureAddTarget() {
         mainView.loginbutton.addTarget(self, action: #selector(tappedLoginButton), for: .touchUpInside)
         mainView.signupButton.addTarget(self, action: #selector (tappedSignUpButton), for: .touchUpInside)
     }
     
-    @objc func tappedLoginButton() {
+    private func configureDelegate() {
+        mainView.emailTextField.delegate = self
+        mainView.passwordTextField.delegate = self
+    }
+    
+    @objc private func tappedLoginButton() {
         guard let email = mainView.emailTextField.text, !email.isEmpty,
               let password = mainView.passwordTextField.text, !password.isEmpty else {
             print("Email과 비밀번호를 입력해주세요.")
@@ -57,10 +63,22 @@ final class MainViewController: UIViewController {
         }
     }
     
-    @objc func tappedSignUpButton() {
+    @objc private func tappedSignUpButton() {
         let signUpVC = SignUpViewController()
         signUpVC.modalPresentationStyle = .automatic
         present(signUpVC, animated: true)
+    }
+}
+
+extension MainViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == mainView.emailTextField {
+            mainView.passwordTextField.becomeFirstResponder()
+        } else if textField == mainView.passwordTextField {
+            textField.resignFirstResponder()
+            self.tappedLoginButton()
+        }
+        return true
     }
 }
 
